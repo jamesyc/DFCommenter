@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "DFCommenter",
+  "description": "Adds a 'Comment as Dave Fontenot' feature to facebook.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://facebook.com/",
+    "http://facebook.com/",
+    "https://www.facebook.com/",
+    "http://www.facebook.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["jquery-1.11.0.min.js", "myscript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
